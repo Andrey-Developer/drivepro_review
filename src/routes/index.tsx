@@ -10,8 +10,10 @@ import car1 from "@/assets/audi-capo.jpg";
 import car2 from "@/assets/carro-capa.jpg";
 import car3 from "@/assets/carro-2.jpg";
 import car4 from "@/assets/mecanico.jpg";
+import bateriasMoura from "@/assets/baterias.jpg";
 
-const WHATSAPP = "https://wa.me/5551996232896";
+const WHATSAPP = "https://wa.me/555197972896";
+const PHONE_LABEL = "(51) 9797-2896";
 const INSTAGRAM = "https://www.instagram.com/driveproautocenter";
 const MAPS = "https://www.google.com/maps/search/?api=1&query=Av.+Dr.+Carlos+Barbosa,+1104+-+Medianeira,+Porto+Alegre+-+RS";
 
@@ -53,7 +55,7 @@ export const Route = createFileRoute("/")({
           addressRegion: "RS",
           addressCountry: "BR",
         },
-        telephone: "+5551996232896",
+        telephone: "+555197972896",
         url: "https://driveproautocenter.com.br",
         openingHours: ["Mo-Fr 08:00-18:00", "Sa 08:00-12:00"],
         priceRange: "$$",
@@ -230,6 +232,31 @@ function HomePage() {
               </div>
             ))}
           </div>
+          <div className="mt-8 overflow-hidden rounded-2xl border border-primary/30 bg-card shadow-elegant">
+            <div className="grid lg:grid-cols-[1.05fr_1.25fr]">
+              <img
+                src={bateriasMoura}
+                alt="Baterias Moura na Drive Pro Auto Center"
+                className="h-72 w-full object-cover lg:h-full"
+                loading="lazy"
+              />
+              <div className="p-7 sm:p-9">
+                <div className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-brand-blue-light">
+                  <BatteryCharging className="h-4 w-4" />
+                  Venda de baterias
+                </div>
+                <h3 className="mt-5 font-display text-3xl font-bold leading-tight sm:text-4xl">
+                  Baterias Moura com instalação rápida.
+                </h3>
+                <p className="mt-4 text-muted-foreground leading-relaxed">
+                  Trabalhamos com venda, teste e substituição de baterias Moura para o seu veículo sair pronto, seguro e sem complicação.
+                </p>
+                <a href={WHATSAPP} target="_blank" rel="noopener" className="mt-6 inline-flex items-center gap-2 rounded-md gradient-brand px-6 py-3 font-semibold text-primary-foreground shadow-glow hover:scale-[1.03] transition">
+                  <WhatsAppIcon className="h-5 w-5" /> Consultar bateria
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -323,7 +350,7 @@ function HomePage() {
               </div>
               <div className="flex items-start gap-3">
                 <Phone className="h-5 w-5 text-brand-blue-light shrink-0 mt-1" />
-                <a href={WHATSAPP} target="_blank" rel="noopener" className="hover:text-brand-blue-light">(51) 99623-2896</a>
+                <a href={WHATSAPP} target="_blank" rel="noopener" className="hover:text-brand-blue-light">{PHONE_LABEL}</a>
               </div>
               <div className="flex items-start gap-3">
                 <Instagram className="h-5 w-5 text-brand-blue-light shrink-0 mt-1" />
@@ -383,7 +410,7 @@ function HomePage() {
           <div>
             <div className="font-display font-semibold mb-3">Contato</div>
             <ul className="space-y-2 text-sm">
-              <li><a href={WHATSAPP} target="_blank" rel="noopener" className="text-muted-foreground hover:text-brand-blue-light flex items-center gap-2"><WhatsAppIcon className="h-4 w-4" /> (51) 99623-2896</a></li>
+              <li><a href={WHATSAPP} target="_blank" rel="noopener" className="text-muted-foreground hover:text-brand-blue-light flex items-center gap-2"><WhatsAppIcon className="h-4 w-4" /> {PHONE_LABEL}</a></li>
               <li><a href={INSTAGRAM} target="_blank" rel="noopener" className="text-muted-foreground hover:text-brand-blue-light flex items-center gap-2"><Instagram className="h-4 w-4" /> @driveproautocenter</a></li>
             </ul>
           </div>
