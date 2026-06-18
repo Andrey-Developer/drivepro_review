@@ -1,0 +1,190 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Drive Pro Auto Center</title>
+    <meta
+      name="description"
+      content="Drive Pro Auto Center: mecanica automotiva, suspensao, freios, embreagens, troca de oleo e baterias em Porto Alegre."
+    />
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #101114;
+        --panel: #181b20;
+        --text: #f5f7fa;
+        --muted: #b7c0cc;
+        --line: #2b3038;
+        --accent: #f2c14e;
+        --accent-2: #e64b3c;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: Arial, Helvetica, sans-serif;
+        background:
+          linear-gradient(rgba(16, 17, 20, 0.72), rgba(16, 17, 20, 0.88)),
+          radial-gradient(circle at 80% 20%, rgba(230, 75, 60, 0.22), transparent 28rem),
+          radial-gradient(circle at 15% 85%, rgba(242, 193, 78, 0.2), transparent 30rem),
+          var(--bg);
+        color: var(--text);
+      }
+
+      main {
+        display: grid;
+        min-height: 100vh;
+        place-items: center;
+        padding: 32px 18px;
+      }
+
+      .wrap {
+        width: min(980px, 100%);
+        display: grid;
+        gap: 28px;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 800;
+        letter-spacing: 0.02em;
+      }
+
+      .mark {
+        display: grid;
+        width: 42px;
+        height: 42px;
+        place-items: center;
+        border: 2px solid var(--accent);
+        border-radius: 8px;
+        color: var(--accent);
+      }
+
+      .status {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 8px 12px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      section {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: rgba(24, 27, 32, 0.82);
+        padding: clamp(28px, 6vw, 64px);
+      }
+
+      h1 {
+        max-width: 780px;
+        margin: 0;
+        font-size: clamp(40px, 8vw, 82px);
+        line-height: 0.92;
+        letter-spacing: 0;
+      }
+
+      p {
+        max-width: 650px;
+        margin: 20px 0 0;
+        color: var(--muted);
+        font-size: clamp(17px, 2vw, 21px);
+        line-height: 1.55;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 30px;
+      }
+
+      a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 46px;
+        border-radius: 6px;
+        padding: 0 18px;
+        color: var(--text);
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .primary {
+        background: var(--accent-2);
+      }
+
+      .secondary {
+        border: 1px solid var(--line);
+        background: #111318;
+      }
+
+      .services {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 10px;
+        margin-top: 34px;
+      }
+
+      .service {
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        padding: 14px;
+        color: var(--muted);
+        background: #111318;
+      }
+
+      @media (max-width: 760px) {
+        header {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .services {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="wrap">
+        <header>
+          <div class="brand"><span class="mark">DP</span> Drive Pro Auto Center</div>
+          <div class="status">Online localmente</div>
+        </header>
+
+        <section>
+          <h1>Mecanica automotiva com atendimento direto e confiavel.</h1>
+          <p>
+            Freios, suspensao, embreagem, troca de oleo, baterias e manutencao preventiva em Porto Alegre.
+          </p>
+          <div class="actions">
+            <a class="primary" href="https://wa.me/5551999999999">Chamar no WhatsApp</a>
+            <a class="secondary" href="tel:+5551999999999">Ligar agora</a>
+          </div>
+          <div class="services" aria-label="Servicos">
+            <div class="service">Suspensao</div>
+            <div class="service">Freios</div>
+            <div class="service">Embreagem</div>
+            <div class="service">Troca de oleo</div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
